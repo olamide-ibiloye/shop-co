@@ -7,7 +7,7 @@ import React from "react";
 const Hero = () => {
   return (
     <div className="bg-[#F2F0F1]">
-      <div className="max-w-7xl overflow-hidden mx-auto max-md:px-5 py-15 grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-6">
+      <div className="max-w-7xl overflow-hidden mx-auto px-5 py-15 grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-6">
         {/* Hero Text */}
         <div>
           <h1 className={`${HEADER_FONT.className} font-black text-5xl`}>

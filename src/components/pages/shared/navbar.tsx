@@ -28,7 +28,7 @@ const Navbar = () => {
       </div>
 
       {/* // NavContainer */}
-      <div className="max-w-7xl mx-auto max-md:px-5 py-4 flex justify-between items-center gap-4">
+      <div className="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center gap-4">
         <div className="flex justify-between items-center gap-2">
           <Button variant="ghost" size="icon" className="md:hidden">
             <Menu />
