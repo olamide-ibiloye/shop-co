@@ -1,5 +1,7 @@
 import { HEADER_FONT } from "@/lib/font";
 import React from "react";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 const BrowseStyle = () => {
   return (
@@ -12,23 +14,33 @@ const BrowseStyle = () => {
         </h2>
 
         <div className="grid md:grid-cols-10 gap-4">
-          <PictureTile url={'url("/images/image 11 (1).png")'} title="Casual" />
+          <PictureTile
+            url="/images/image 11 (1).png"
+            title="Casual"
+            imgClasses="-right-[40%]"
+          />
 
           <PictureTile
-            url={'url("/images/image 13.png")'}
+            url="/images/image 13.png"
             title="Formal"
             size="lg"
+            imgClasses="w-[500px] top-0"
           />
         </div>
 
         <div className="grid md:grid-cols-10 gap-4">
           <PictureTile
-            url={'url("/images/image 12.png")'}
+            url="/images/image 12.png"
             title="Party"
             size="lg"
+            imgClasses="w-[500px] -top-[20%]"
           />
 
-          <PictureTile url={'url("/images/image 14.png")'} title="Gym" />
+          <PictureTile
+            url="/images/image 14.png"
+            title="Gym"
+            imgClasses="w-[300px] -top-[20%]"
+          />
         </div>
       </div>
     </div>
@@ -41,26 +53,30 @@ const PictureTile = ({
   url,
   size = "md",
   title,
+  imgClasses,
 }: {
   url: string;
   title: string;
   size?: "md" | "lg";
+  imgClasses?: string;
 }) => {
   return (
     <div
       className={`${
-        size === "md" ? "col-span-4" : "col-span-6"
-      } relative bg-white`}
-      style={{
-        backgroundImage: url,
-        backgroundSize: "400px",
-        backgroundPosition: "bottom -60px left 80px",
-        backgroundRepeat: "no-repeat",
-        height: "220px",
-        width: "auto",
-        borderRadius: "15px",
-      }}
+        size === "md" ? "md:col-span-4" : "md:col-span-6"
+      } relative bg-[#FDFDFD] h-[250px] rounded-[10px] overflow-hidden`}
     >
+      <Image
+        src={url}
+        alt={title}
+        width={500}
+        height={500}
+        className={cn(
+          "absolute -right-[10%] bottom-0 w-[400px] h-auto object-cover",
+          imgClasses
+        )}
+      />
+
       <p className="font-black absolute top-5 left-8 text-2xl">{title}</p>
     </div>
   );

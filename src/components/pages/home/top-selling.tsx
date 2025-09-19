@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 const items: MerchandiseType[] = [
   {
     productId: "1",
-    imageUrl: 'url("/images/merchandise/image 7 (15).png")',
+    imageUrl: "/images/merchandise/image 7 (15).png",
     productName: "Vertical Striped Shirt",
     noOfStars: 5,
     currentPrice: 232,
@@ -16,21 +16,21 @@ const items: MerchandiseType[] = [
   },
   {
     productId: "2",
-    imageUrl: 'url("/images/merchandise/image 8 (16).png")',
+    imageUrl: "/images/merchandise/image 8 (16).png",
     productName: "Courage Graphic T-shirt",
     noOfStars: 4,
     currentPrice: 145,
   },
   {
     productId: "3",
-    imageUrl: 'url("/images/merchandise/image 9 (7).png")',
+    imageUrl: "/images/merchandise/image 9 (7).png",
     productName: "Loose Fit Bermuda Shorts",
     noOfStars: 3,
     currentPrice: 80,
   },
   {
     productId: "4",
-    imageUrl: 'url("/images/merchandise/image 11.png")',
+    imageUrl: "/images/merchandise/image 11.png",
     productName: "Faded Skinny Jeans",
     noOfStars: 4,
     currentPrice: 210,
@@ -44,7 +44,7 @@ const TopSelling = () => {
         Top Selling
       </h2>
 
-      <div className="py-10 flex justify-center items-center gap-4">
+      <div className="py-10 flex justify-center items-center gap-4 flex-wrap">
         {items.map((item) => (
           <Merchandise
             key={item.productId}

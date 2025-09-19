@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Star } from "lucide-react";
 import React from "react";
+import Image from "next/image";
 
 export type MerchandiseType = {
   productId: string;
@@ -20,19 +21,15 @@ const Merchandise = ({
 }: MerchandiseType) => {
   return (
     <div>
-      <div
-        style={{
-          backgroundImage: imageUrl,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          height: "220px",
-          width: "220px",
-          borderRadius: "10px",
-        }}
+      <Image
+        src={imageUrl}
+        alt={productName}
+        width={500}
+        height={500}
+        className="w-[270px] h-[270px] object-cover rounded-[10px]"
       />
 
-      <div className="mt-2">
+      <div className="mt-4">
         <p className="font-black text-sm">{productName}</p>
 
         <div className="flex items-center justify-start gap-3 my-1">
