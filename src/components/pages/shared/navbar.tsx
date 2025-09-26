@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { HEADER_FONT } from "@/lib/font";
 import { CircleUserRound, Menu, Search, ShoppingCart, X } from "lucide-react";
 import Link from "next/link";
 import React from "react";
