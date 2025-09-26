@@ -4,6 +4,7 @@ import { HEADER_FONT } from "@/lib/font";
 import { CircleUserRound, Menu, Search, ShoppingCart, X } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import Logo from "./logo";
 
 const Navbar = () => {
   return (
@@ -34,13 +35,7 @@ const Navbar = () => {
             <Menu />
           </Button>
 
-          {/* Logo */}
-          <Link
-            href="/"
-            className={`${HEADER_FONT.className} text-xl font-black`}
-          >
-            SHOP.CO
-          </Link>
+          <Logo />
         </div>
 
         <div className="hidden justify-center items-center flex-1 gap-5 md:flex">
