@@ -1,31 +1,41 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { CircleUserRound, Menu, Search, ShoppingCart, X } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Logo from "./logo";
 
 const Navbar = () => {
+  const [isVisible, setIsVisible] = useState(true);
+
+  const handleClose = () => {
+    setIsVisible(false);
+  };
+
   return (
     <div>
       {/* TODO: Make the alert close on click */}
       {/* SignUpAlert */}
-      <div className="w-full bg-foreground text-background">
-        <div className="flex justify-center items-center">
-          <p className="flex-1 text-center text-sm">
-            Sign up and get 20% off your first order.
-            <span className="ml-2">
-              <Link href="/" className="underline">
-                Sign up Now
-              </Link>
-            </span>
-          </p>
+      {isVisible && (
+        <div className="w-full bg-foreground text-background">
+          <div className="flex justify-center items-center">
+            <p className="flex-1 text-center text-sm">
+              Sign up and get 20% off your first order.
+              <span className="ml-2">
+                <Link href="/" className="underline">
+                  Sign up Now
+                </Link>
+              </span>
+            </p>
 
-          <Button variant="ghost" size="icon">
-            <X />
-          </Button>
+            <Button variant="ghost" size="icon" onClick={handleClose}>
+              <X />
+            </Button>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* // NavContainer */}
       <div className="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center gap-4">
