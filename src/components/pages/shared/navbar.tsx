@@ -50,7 +50,7 @@ const Navbar = () => {
         <div className="hidden justify-center items-center flex-1 gap-5 md:flex">
           {/* NavItems */}
           <div className="flex justify-center items-center gap-5">
-            <Link href="/">Shop</Link>
+            <Link href="/shop">Shop</Link>
             <Link href="/">On Sale</Link>
             <Link href="/">New Arrivals</Link>
             <Link href="/">Brands</Link>
