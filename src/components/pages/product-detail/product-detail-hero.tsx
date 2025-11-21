@@ -8,41 +8,57 @@ import { Button } from "@/components/ui/button";
 
 const ProductDetailHero = () => {
   return (
-    <div className="w-full grid grid-cols-2 gap-4 h-[500px]">
-      <div className="flex justify-between items-center w-full">
-        <div className="flex flex-col gap-2">
+    <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 py-5 h-full ">
+      <div className="flex flex-col md:flex-row justify-between items-center w-full gap-2 min-h-[500px]">
+        {/* Main Image */}
+        <div className="relative flex-1 h-full w-full md:hidden">
           <Image
             src="/images/merchandise/image 1 (7).png"
             alt="Versace"
-            width={400}
-            height={400}
-            className="h-auto w-[100px] rounded-[10px]"
-          />
-
-          <Image
-            src="/images/merchandise/image 5 (1).png"
-            alt="Versace"
-            width={400}
-            height={400}
-            className="h-auto w-[100px] rounded-[10px]"
-          />
-
-          <Image
-            src="/images/merchandise/image 6.png"
-            alt="Versace"
-            width={400}
-            height={400}
-            className="h-auto w-[100px] rounded-[10px]"
+            fill
+            className="object-cover rounded-[10px]"
           />
         </div>
 
-        <Image
-          src="/images/merchandise/image 1 (7).png"
-          alt="Versace"
-          width={1000}
-          height={1000}
-          className="h-[400px] w-[400px] rounded-[10px]"
-        />
+        {/* Column of images */}
+        <div className="flex flex-row md:flex-col max-md:h-[25%] gap-2 h-full max-md:w-full w-[150px]">
+          <div className="relative flex-1">
+            <Image
+              src="/images/merchandise/image 1 (7).png"
+              alt="Versace"
+              fill
+              className="object-cover rounded-[10px]"
+            />
+          </div>
+
+          <div className="relative flex-1">
+            <Image
+              src="/images/merchandise/image 5 (1).png"
+              alt="Versace"
+              fill
+              className="object-cover rounded-[10px]"
+            />
+          </div>
+
+          <div className="relative flex-1">
+            <Image
+              src="/images/merchandise/image 6.png"
+              alt="Versace"
+              fill
+              className="object-cover rounded-[10px]"
+            />
+          </div>
+        </div>
+
+        {/* Main Image */}
+        <div className="relative flex-1 h-full w-full max-md:hidden">
+          <Image
+            src="/images/merchandise/image 1 (7).png"
+            alt="Versace"
+            fill
+            className="object-cover rounded-[10px]"
+          />
+        </div>
       </div>
 
       <div>
@@ -115,7 +131,7 @@ const ProductDetailHero = () => {
               <Minus />
             </Button>
 
-            <p>1</p>
+            <p className="px-2">1</p>
 
             <Button size="icon" variant="ghost">
               <Plus />
