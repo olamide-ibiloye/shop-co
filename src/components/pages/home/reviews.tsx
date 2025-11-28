@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { HEADER_FONT } from "@/lib/font";
-import { ArrowLeft, ArrowRight, Check, Star } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import React from "react";
 import ReviewCard from "./review-card";
 
