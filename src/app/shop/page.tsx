@@ -1,7 +1,8 @@
+import { redirect } from "next/navigation";
 import React from "react";
 
 const ShopPage = () => {
-  return <div>ShopPage</div>;
+  redirect("/shop/product-detail");
 };
 
 export default ShopPage;

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { HEADER_FONT } from "@/lib/font";
-import { Minus, Plus, Star } from "lucide-react";
+import { Check, Minus, Plus, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
@@ -96,9 +96,11 @@ const ProductDetailHero = () => {
         <div>
           <p className="text-muted-foreground text-sm">Select Colors</p>
           <div className="flex items-center justify-start gap-2 py-2">
-            <div className="w-[20px] h-[20px] rounded-full bg-[#000]"></div>
-            <div className="w-[20px] h-[20px] rounded-full bg-[#fff]"></div>
-            <div className="w-[20px] h-[20px] rounded-full bg-[#FF0000]"></div>
+            <div className="w-[30px] h-[30px] rounded-full bg-[#4F4631] flex items-center justify-center">
+              <Check className="text-white size-4" />
+            </div>
+            <div className="w-[30px] h-[30px] rounded-full bg-[#314F4A]"></div>
+            <div className="w-[30px] h-[30px] rounded-full bg-[#31344F]"></div>
           </div>
         </div>
 
