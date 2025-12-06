@@ -20,17 +20,18 @@ const Merchandise = ({
   discount,
 }: MerchandiseType) => {
   return (
-    <div>
-      <Image
-        src={imageUrl}
-        alt={productName}
-        width={500}
-        height={500}
-        className="w-[270px] h-[270px] object-cover rounded-[10px]"
-      />
+    <div className="flex h-[350px] flex-col">
+      <div className="flex-1 relative h-full">
+        <Image
+          src={imageUrl}
+          alt={productName}
+          fill
+          className="object-cover rounded-[10px]"
+        />
+      </div>
 
       <div className="mt-4">
-        <p className="font-black text-sm">{productName}</p>
+        <p className="font-black">{productName}</p>
 
         <div className="flex items-center justify-start gap-3 my-1">
           <div className="flex items-center justify-start">

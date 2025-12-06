@@ -1,6 +1,6 @@
 import ProductDetailHero from "@/components/pages/product-detail/product-detail-hero";
 import ProductInfo from "@/components/pages/product-detail/product-info";
-// import OtherOptions from "@/components/pages/product-detail/other-options";
+import OtherOptions from "@/components/pages/product-detail/other-options";
 import React from "react";
 
 const ProductDetailPage = () => {
@@ -8,7 +8,7 @@ const ProductDetailPage = () => {
     <div className="max-w-7xl mx-auto py-5">
       <ProductDetailHero />
       <ProductInfo />
-      {/* <OtherOptions /> */}
+      <OtherOptions />
     </div>
   );
 };

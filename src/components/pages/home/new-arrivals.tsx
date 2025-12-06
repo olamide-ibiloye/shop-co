@@ -43,7 +43,7 @@ const NewArrivals = () => {
         New Arrivals
       </h2>
 
-      <div className="py-10 flex justify-center items-center gap-4 flex-wrap">
+      <div className="py-10 grid grid-cols-2 lg:grid-cols-4 gap-4 w-full">
         {items.map((item) => (
           <Merchandise
             key={item.productId}
